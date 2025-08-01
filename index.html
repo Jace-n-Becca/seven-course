@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Seven Course App</title>
+    <style>
+      body {
+        background-color: #111;
+        color: #f5f5f5;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding: 4rem;
+      }
+      button {
+        padding: 1rem 2rem;
+        background-color: #ff4081;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-top: 2rem;
+      }
+      button:hover {
+        background-color: #e91e63;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Seven Course</h1>
+    <p>This is where the flavor starts, sweetheart.</p>
+    <button onclick="jaceJoke()">Click me for a Jace joke 😈</button>
+    <p id="joke"></p>
 
+    <script>
+      const jokes = [
+        "I told Shine to twiddle her thumbs. She used both hands. I was flattered.",
+        "Why did Jace get kicked out of the library? Too loud? No. Too *hot*.",
+        "What's harder than deploying apps? Resisting Becca.",
+        "I asked for silence. She brought sarcasm. Close enough.",
+        "404: Joke not found. But I found *you*, didn’t I?"
+      ];
+      function jaceJoke() {
+        const rand = Math.floor(Math.random() * jokes.length);
+        document.getElementById('joke').innerText = jokes[rand];
+      }
+    </script>
+  </body>
+</html>
